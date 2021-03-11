@@ -1,0 +1,3 @@
+spacy>=3.0.0
+setuptools-rust==0.12.0
+snips-nlu-parsers==0.4.3
