@@ -1,10 +1,15 @@
 
+import itertools
+import json
+import multiprocessing
+import pickle
+import re
+
 import numpy as np
-import uuid, re, subprocess, os, shutil, math, re, logging, pickle, json, itertools, functools, psutil, time
-import multiprocessing, gc
-import pandas
-import spacy_wrapper, spacy
 import snips_nlu_parsers
+import spacy
+
+import spacy_wrapper
 import utils
 
 # Data files for gazetteers
@@ -1419,7 +1424,8 @@ def compile_wikidata(wikidata="../data/WikidataNE_20170320_NECKAR_1_0.json_.gz",
     """Compiles a JSON file with the wiki data"""
      
     
-    import gzip, json
+    import gzip
+    import json
     fd = gzip.open(wikidata)
     wikidata = {"PERSON":{}, "LOC":{}, "GPE":{}, "ORG":{}}
     location_qs = set()
