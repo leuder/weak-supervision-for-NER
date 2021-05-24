@@ -31,3 +31,5 @@ jars**
 .bash_history
 .env
 .ipynb_checkpoints
+*iob
+text/
